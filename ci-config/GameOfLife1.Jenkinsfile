@@ -1,6 +1,12 @@
 pipeline
 {
-
+   agent
+   {
+       node
+       {
+           label "master"
+       }
+   }
 environment
 {
   repo = "https://github.com/AnandShivaSingh/game-of-life"
@@ -20,9 +26,12 @@ stage("Setup")
 {
    steps
    {
+       script
+       {
    PackageVersion = "${env.Major_Version}"+"."+"${env.Minor_Version}"+"."+"${env.BUILD_NUMBER}"
    currentBuild.displayName = PackageVersion
    currentBuild.description = "Branch " + "${env.Branch}" + " Build"
+       }
    
 			
    
