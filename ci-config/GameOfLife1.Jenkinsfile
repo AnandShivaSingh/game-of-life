@@ -10,6 +10,7 @@ pipeline
 environment
 {
   repo = "https://github.com/AnandShivaSingh/game-of-life"
+  MAVEN = tool 'maven'
   jenkins_git_user = "AnandGitHub"
   Major_Version=1
   Minor_Version=1
