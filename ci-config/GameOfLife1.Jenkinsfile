@@ -51,6 +51,24 @@ stage("checkout Github Repository")
 
 }
 
+stage("BUILD")
+{
+   steps
+   {
+         echo ("====== START BUILD =======")
+     
+      script	 
+	  {
+	  echo "Building started"
+	  sh "${env.MAVEN}/bin/mvn -B -V clean package"
+	  }
+   
+   }
+
+
+
+}
+
 }
 
 
