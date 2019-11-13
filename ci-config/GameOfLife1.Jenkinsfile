@@ -3,7 +3,7 @@ pipeline
 
 environment
 {
-  repo=https://github.com/AnandShivaSingh/game-of-life.git
+  repo = "https://github.com/AnandShivaSingh/game-of-life"
   jenkins_git_user = "AnandGitHub"
   Major_Version=1
   Minor_Version=1
