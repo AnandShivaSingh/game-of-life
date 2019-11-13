@@ -7,13 +7,13 @@ environment
   jenkins_git_user = "AnandGitHub"
   Major_Version=1
   Minor_Version=1
-  Branch = Master
+  Branch = "Master"
   
 
 
 }
 
-Stages
+stages
     {
 
 stage
