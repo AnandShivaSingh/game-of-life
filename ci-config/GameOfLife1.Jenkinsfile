@@ -16,9 +16,9 @@ environment
 stages
     {
 
-stage
+stage("Setup")
 {
-   steps("Setup")
+   steps
    {
    PackageVersion = "{$env.Major_Version}"+"."+"${env.Minor_Version}"+"."+"${env.BUILD_NUMBER}"
    currentBuild.DisplayName = PackageVersion
@@ -27,9 +27,9 @@ stage
     }
 }
 
-stage
+stage("checkout Github Repository")
 {
-   steps("checkout Github Repository")
+   steps
    {
                echo("CHECKOUT REPOSITORY...")
 				git credentialsId: "$env.jenkins_git_user", url: "$env.repo", branch: "$env.Branch"
