@@ -20,7 +20,7 @@ stage("Setup")
 {
    steps
    {
-   PackageVersion = "{$env.Major_Version}"+"."+"${env.Minor_Version}"+"."+"${env.BUILD_NUMBER}"
+   PackageVersion = "${env.Major_Version}"+"."+"${env.Minor_Version}"+"."+"${env.BUILD_NUMBER}"
    currentBuild.DisplayName = PackageVersion
    currentBuild.Discription = "Branch " + "${env.Branch}" + " Build"
    
